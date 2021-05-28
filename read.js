@@ -1,5 +1,6 @@
 /* 
 1- Agregar inputs y outputs.
+2- Convertir esto en una clase.
 */
 
 const prompt = require("prompt");
@@ -40,3 +41,4 @@ prompt.get("open", (err, result) => {
     console.log("\nEl proceso ha finalizado exitosamente");
   }
 });
+
