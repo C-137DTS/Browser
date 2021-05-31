@@ -1,5 +1,10 @@
 /* Este programa te permite buscar leer archivos en windows
- */
+ 
+1- Verificar si es un archivo de texto plano y si lo es desplegar la interface del reader.
+2- Pedir el nombre del archivo y la ruta de inicio por consola.
+3- Iniciar con el algoritmo para indicaar la profundidad.
+
+*/
 
 const m_reader = require("./read");
 const reader = new m_reader();
