@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/C-137DTS/Browser#readme",
   "dependencies": {
-    "fast-levenshtein": "^3.0.0"
+    "fast-levenshtein": "^3.0.0",
+    "nodemon": "^2.0.7",
+    "prompt": "^1.1.0"
   }
 }
