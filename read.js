@@ -58,7 +58,7 @@ class reader {
   }
 }
 
-let prueba = new reader()
-prueba.interface()
+// let prueba = new reader()
+// prueba.interface()
 
 module.exports = reader;

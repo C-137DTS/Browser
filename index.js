@@ -1,6 +1,6 @@
 /* Este programa te permite buscar leer archivos en windows
  
-1- Verificar si es un archivo de texto plano y si lo es desplegar la interface del reader.
+1- Verificar si es un archivo de texto plano y si lo es desplegar la interface del reader. (usando expresiones regulares)
 2- Pedir el nombre del archivo y la ruta de inicio por consola.
 3- Iniciar con el algoritmo para indicaar la profundidad.
 
@@ -33,7 +33,7 @@ function search(files) {
     // Busca el la lista de archivos del directorio un archivo que coincida con el nombre de archivo que proporcionamos.
   let maybe = files.filter((file) => file == `${file_name}\r`);
   if (maybe[0]) {
-    console.log("El archivo se encuentra en este directorio");
+    console.log("El archivo se encuentra en este directorio\n");
     // Dispara la consola interactiva para elegir si queremos abrir el archivo
     reader.interface();
   } else {
