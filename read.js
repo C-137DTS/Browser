@@ -49,7 +49,6 @@ class reader {
     //Lista de extenciones de archivos de texto plano
     this.plainText = ['txt', 'js', 'json', 'py']
     this.ext = `${file[file.length - 2]}${file[file.length - 1]}`
-
     this.match = this.plainText.find(fileExt => fileExt === this.ext)
     if(this.match[0]){
       return true

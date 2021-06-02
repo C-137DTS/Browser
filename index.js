@@ -1,7 +1,6 @@
 /* Este programa te permite buscar leer archivos en windows
  
 1- Verificar si es un archivo de texto plano y si lo es desplegar la interface del reader. (usando expresiones regulares)
-2- Pedir el nombre del archivo y la ruta de inicio por consola.
 3- Iniciar con el algoritmo para indicaar la profundidad.
 
 */
@@ -14,8 +13,9 @@ const { exec } = require("child_process");
 const { stderr } = require("process");
 const { SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG } = require("constants");
 
-let file_name = "index.js";
+let file_name = process.argv[2];
 let dir_files = [];
+let directory = process.argv[3]
 function ls(directory, cb) {
     // Muestra los archivos y directorios que tenemos en la ruta indicada
   exec(`dir ${directory} /b`, (err, stdout, stderr) => {
@@ -62,4 +62,4 @@ function run(directory) {
   ls(directory, search);
 }
 
-run(".\\");
+run(directory);
