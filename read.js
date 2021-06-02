@@ -48,16 +48,29 @@ class reader {
   isPlain(file){
     //Lista de extenciones de archivos de texto plano
     this.plainText = ['txt', 'js', 'json', 'py']
-    this.ext = `${file[file.length - 2]}${file[file.length - 1]}`
+    this.ext = this.getExt(file)
     this.match = this.plainText.find(fileExt => fileExt === this.ext)
     if(this.match[0]){
       return true
     }
     return false
   }
+
+  getExt(file_name) {
+    this.ext = ''
+    for(let i = 0; i < file_name.length; i++){
+      if(file_name.charAt(i) === '.'){
+        for(let j = i+1; j < file_name.length; j++){
+          this.ext = this.ext + file_name.charAt(j)
+        }
+        return this.ext
+      }
+    }
+  } 
 }
 
 // let prueba = new reader()
-// prueba.interface()
+// let filess = prueba.getExt('index.docx')
+// console.log(filess)
 
 module.exports = reader;
